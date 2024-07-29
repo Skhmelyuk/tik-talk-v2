@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+:root {
+  --ff-primary: "JetBrains Mono", monospace;
+  --clr-dark: #000;
+  --clr-light: #fff;
+  --clr-primary: #ae7aff;
+  --clr-grey: #5f646d;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-primary);
+  background: var(--clr-dark) url("/assets/img/bg.png") center / cover no-repeat;
+
+  color: var(--clr-light);
+  font-weight: 400;
+  display: grid;
+}
+
+input {
+  font-family: inherit;
+}
+
+.btn {
+  padding: 0.625rem 1.25rem;
+  border: 0.0625rem solid var(--clr-primary);
+  border-radius: 0.25rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-dark);
+  font-weight: 700;
+  line-height: 171.428571%; /* 24/14 */
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.3s, color 0.3s;
+  &:hover {
+    background-color: transparent;
+    color: var(--clr-primary);
+  }
+}

@@ -1,0 +1,66 @@
+.profile-card {
+  border: 0.0625rem solid var(--clr-light);
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  &__avatar {
+    width: 4.375rem;
+    height: 4.375rem;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__user {
+    display: grid;
+    grid-template-columns: 4.875rem 1fr;
+    grid-gap: 1rem;
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    line-height: 1.2;
+
+    strong {
+      font-size: 1.125rem;
+      font-weight: 800;
+      line-height: 133.333333%; /* 24/18 */
+    }
+
+    span {
+      font-weight: 100;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    align-items: start;
+    align-content: start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__skill {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid var(--clr-light);
+    font-size: 0.75rem;
+    font-weight: 700;
+    &--active {
+      border: 0.0625rem solid var(--clr-primary);
+      color: var(--clr-primary);
+    }
+  }
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-light);
+}
