@@ -1,24 +1,27 @@
-<div class="profile-card">
-  <div class="profile-card__user">
-    <img class="profile-card__avatar" src="" />
-    <div class="profile-card__name">
-      <strong>Хмелюк Сергій</strong>
-      <span>nirvana</span>
+@if (profile) {
+  <div class="profile-card">
+    <div class="profile-card__user">
+      <img
+        class="profile-card__avatar"
+        [src]="profile.avatarUrl | imgUrl"
+        [alt]="profile.username"
+      />
+      <div class="profile-card__name">
+        <strong>{{profile.firstName}} {{profile.lastName}}</strong>
+        <span>{{profile.username}}</span>
+      </div>
+    </div>
+    <div class="profile-card__desc">
+     {{profile.description}}
+    </div>
+    <div class="profile-card__tags">
+      @for (tag of profile.stack; track tag) {
+        <span class="profile-card__skill profile-card__skill">{{tag}}</span>
+      }
+    </div>
+    <div class="profile-card__buttons">
+      <button class="btn">Подписаться</button>
     </div>
   </div>
-  <div class="profile-card__desc">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis tempore
-    expedita quisquam, voluptates aperiam, quidem, nobis sunt eum vero
-    architecto quos velit mollitia rerum eligendi fuga corrupti eveniet
-    quibusdam asperiores.
-  </div>
-  <div class="profile-card__tags">
-    <span class="profile-card__skill profile-card__skill">HTML</span>
-    <span class="profile-card__skill profile-card__skill">CSS</span>
-    <span class="profile-card__skill profile-card__skill">JavaScript</span>
-    <span class="profile-card__skill profile-card__skill">Angular</span>
-  </div>
-  <div class="profile-card__buttons">
-    <button class="btn">Подписаться</button>
-  </div>
-</div>
+}
+
