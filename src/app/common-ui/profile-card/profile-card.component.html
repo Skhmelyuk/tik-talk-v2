@@ -16,11 +16,11 @@
     </div>
     <div class="profile-card__tags">
       @for (tag of profile.stack; track tag) {
-        <span class="profile-card__skill profile-card__skill">{{tag}}</span>
+        <app-tag [tag]="tag"></app-tag>
       }
     </div>
     <div class="profile-card__buttons">
-      <button class="btn">Подписаться</button>
+      <app-button></app-button>
     </div>
   </div>
 }
